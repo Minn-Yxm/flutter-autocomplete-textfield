@@ -428,14 +428,12 @@ class AutoCompleteTextFieldState<T> extends State<AutoCompleteTextField> {
         child: textField,
         onKey: (e) {
           if (e.isKeyPressed(LogicalKeyboardKey.arrowDown)) {
-            print("LogicalKeyboardKey.arrowDown");
             currentHoverIndex = filteredSuggestions.isEmpty
                 ? -1
                 : (currentHoverIndex + 1) % filteredSuggestions.length;
             updateOverlay(currentText);
           }
           if (e.isKeyPressed(LogicalKeyboardKey.arrowUp)) {
-            print("LogicalKeyboardKey.arrowUp");
             currentHoverIndex = filteredSuggestions.isEmpty
                 ? -1
                 : (currentHoverIndex - 1) % filteredSuggestions.length;
