@@ -61,7 +61,9 @@ class _FirstPageState extends State<FirstPage> {
     textField = SimpleAutoCompleteTextField(
       key: key,
       decoration: new InputDecoration(errorText: "Beans"),
-      controller: TextEditingController(text: "Starting Text"),
+      controller: TextEditingController(
+        text: "Starting Text",
+      ),
       suggestions: suggestions,
       textChanged: (text) => currentText = text,
       clearOnSubmit: true,
@@ -231,7 +233,7 @@ class _SecondPageState extends State<SecondPage> {
       itemSubmitted: (item) => setState(() => selected = item),
       key: key,
       suggestions: suggestions,
-      itemBuilder: (context, suggestion) => new Padding(
+      itemBuilder: (context, suggestion, i) => new Padding(
           child: new ListTile(
               title: new Text(suggestion.name),
               trailing: new Text("Stars: ${suggestion.stars}")),

@@ -1,5 +1,6 @@
 import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -76,7 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             onKey: (e){
-              print("e.data = ${e.data}");
+              if(e.isKeyPressed(LogicalKeyboardKey.arrowDown)){
+
+              }
             },
           )
         ),
